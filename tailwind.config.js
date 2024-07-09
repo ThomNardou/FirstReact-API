@@ -5,7 +5,11 @@ export default {
     './index.html'
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        custom: ['valorantFont', 'sans-serif'],
+      }
+    },
   },
   plugins: [],
 }

@@ -13,21 +13,21 @@ export default function Home() {
 
   return (
     <>
-      <main className="bg-black py-10 font-custom text-white">
+      <main className="bg-black py-10 font-custom text-white flex flex-col justify-center">
         {agents.map((agent) => {
           if (agent.developerName != "Hunter_NPE") {
             return (
               <div
                 key={agent.uuid}
-                className={`flex justify-around items-center w-auto m-10 bg-slate-500 rounded-3xl`}
+                className={`flex self-center justify-around items-center w-9/12 m-10 bg-slate-500 rounded-3xl`}
               >
                 <div>
                   <h1 className="text-5xl">{agent.displayName}</h1>
-                  <div className="test flex items-center mt-4">
+                  <div className="test flex items-center mt-4 mb-8">
                     <img src={agent.role.displayIcon} className="w-8 h-8" />
                     <p className="ml-5">{agent.role.displayName}</p>
                   </div>
-                  <Link to={`/agent/${agent.uuid}`} className="bg-slate-400 text-white my-10 py-2 px-6 rounded-lg hover:bg-slate-600 transition delay-100">Learn more</Link>
+                  <Link to={`/agent/${agent.uuid}`} className="py-4 px-6 bg-slate-400 text-white rounded-lg hover:bg-slate-600 transition delay-100">Learn more</Link>
                 </div>
 
                 <div className="relative">

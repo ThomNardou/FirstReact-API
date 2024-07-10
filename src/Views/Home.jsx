@@ -17,10 +17,10 @@ export default function Home() {
         {agents.map((agent) => {
           if (agent.developerName != "Hunter_NPE") {
             return (
-              <div key={agent.uuid} className="relative overflow-hidden flex self-center justify-around items-center w-9/12 m-10 bg-slate-500 rounded-3xl">
+              <div key={agent.uuid} className="relative overflow-hidden flex self-center justify-around items-center w-9/12 m-10 rounded-3xl" style={{backgroundColor: `#${agent.backgroundGradientColors[1]}`}}>
 
-                <div className="w-[1000px] h-[1000px] rounded-full  bg-slate-800 absolute top-1 left-0 -translate-x-1/2 -translate-y-1/2 blur-2xl"></div>
-                <div className="w-[1000px] h-[1000px] rounded-full  bg-slate-800 absolute bottom-1 right-0 translate-x-1/2 translate-y-1/2 blur-2xl"></div>
+                <div className="w-[100vh] h-[100vh] rounded-full absolute top-1 left-0 -translate-x-1/2 -translate-y-1/2 blur-2xl" style={{backgroundColor: `#${agent.backgroundGradientColors[3]}`}}></div>
+                <div className="w-[100vh] h-[100vh] rounded-full absolute bottom-1 right-0 translate-x-1/2 translate-y-1/2 blur-2xl" style={{backgroundColor: `#${agent.backgroundGradientColors[2]}`}}></div>
 
 
                 <div className="z-10">
@@ -29,7 +29,7 @@ export default function Home() {
                     <img src={agent.role.displayIcon} className="w-8 h-8" />
                     <p className="ml-5">{agent.role.displayName}</p>
                   </div>
-                  <Link to={`/agent/${agent.uuid}`} className="py-4 px-6 bg-slate-400 text-white rounded-lg hover:bg-slate-600 transition delay-100">Learn more</Link>
+                  <Link to={`/agent/${agent.uuid}`} className="py-4 px-6 text-white rounded-lg transition delay-100" style={{backgroundColor: `#${agent.backgroundGradientColors[0]}`}}>Learn more</Link>
                 </div>
 
                 <div className="relative">
